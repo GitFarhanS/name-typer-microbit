@@ -47,12 +47,12 @@ text_list = [
 index = 0
 name = ""
 basic.forever(function () {
-    if (index == -1) {
-        index = 25
+    if (index == 0) {
+        index = 26
     }
 })
 basic.forever(function () {
     if (index == 27) {
-        index = 0
+        index = 1
     }
 })
