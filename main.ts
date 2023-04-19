@@ -1,13 +1,21 @@
 input.onButtonPressed(Button.A, function () {
-    basic.showString("" + (text_list[index]))
-    index += 1
+    if (index == 26) {
+        index = 0
+    } else {
+        basic.showString("" + (text_list[index]))
+        index += 1
+    }
 })
 input.onButtonPressed(Button.AB, function () {
     name = "" + name + text_list[index]
 })
 input.onButtonPressed(Button.B, function () {
-    basic.showString("" + (text_list[index]))
-    index += -1
+    if (index == 0) {
+        index = 26
+    } else {
+        basic.showString("" + (text_list[index]))
+        index += -1
+    }
 })
 input.onGesture(Gesture.Shake, function () {
     basic.showString("Hello!")
@@ -47,12 +55,5 @@ text_list = [
 index = 0
 name = ""
 basic.forever(function () {
-    if (index == 0) {
-        index = 26
-    }
-})
-basic.forever(function () {
-    if (index == 27) {
-        index = 1
-    }
+	
 })
