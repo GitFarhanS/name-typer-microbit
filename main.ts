@@ -1,9 +1,9 @@
 input.onButtonPressed(Button.A, function () {
-    if (index == 26) {
+    if (index == 25) {
         index = 0
     } else {
-        basic.showString("" + (text_list[index]))
         index += 1
+        basic.showString("" + (text_list[index]))
     }
 })
 input.onButtonPressed(Button.AB, function () {
@@ -11,10 +11,10 @@ input.onButtonPressed(Button.AB, function () {
 })
 input.onButtonPressed(Button.B, function () {
     if (index == 0) {
-        index = 26
+        index = 25
     } else {
-        basic.showString("" + (text_list[index]))
         index += -1
+        basic.showString("" + (text_list[index]))
     }
 })
 input.onGesture(Gesture.Shake, function () {
@@ -52,8 +52,10 @@ text_list = [
 "y",
 "z"
 ]
+basic.showString("Enter name")
 index = 0
 name = ""
+basic.showString("" + (text_list[0]))
 basic.forever(function () {
 	
 })
